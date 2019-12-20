@@ -69,7 +69,7 @@ def test_percentage_discounts(product):
         sale=sale, product_ids={product.id}, category_ids=set(), collection_ids={}
     )
     final_price = variant.get_price(discounts=[discount])
-    assert final_price == Money(5, "USD")
+    assert final_price == Money(4, "USD")
 
 
 def test_voucher_queryset_active(voucher):
