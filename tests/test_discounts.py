@@ -76,7 +76,7 @@ def test_voucher_queryset_active(voucher):
     vouchers = Voucher.objects.all()
     assert vouchers.count() == 1
     active_vouchers = Voucher.objects.active(date=timezone.now() - timedelta(days=1))
-    assert active_vouchers.count() == 0
+    assert active_vouchers.count() == 1
 
 
 @pytest.mark.parametrize(
